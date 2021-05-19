@@ -9,7 +9,7 @@ import { selectsearchInput, setBlogData } from '../features/userSlice';
 const Blogs = () => {
 
     const searchInput = useSelector(selectsearchInput);
-    const blogURL = `https://gnews.io/api/v4/search?q=${searchInput}&token=e7be3a68388390ddf50ad4d8c4def953`
+    const blogURL = `https://gnews.io/api/v4/search?q=${searchInput}&token=${process.env.REACT_APP_API_KEY}`
 
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState();

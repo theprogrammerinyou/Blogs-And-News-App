@@ -24,7 +24,7 @@ const Login = () => {
                      quality blogs. 
                 </p>
                 <GoogleLogin
-                    clientId="718405019783-dgumddv9sbgi8dcpl26c3v4rgjjdmj31.apps.googleusercontent.com"
+                    clientId={process.env.REACT_APP_CLIENT_ID}
                     render={(renderProps) => (
                         <button
                             onClick={renderProps.onClick}
